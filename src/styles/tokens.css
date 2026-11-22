@@ -1,0 +1,135 @@
+:root {
+  /* 8pt 间距系统 */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+
+  /* 字阶 14/15/16/18/22/28 */
+  --fs-xs: 14px;
+  --fs-sm: 15px;
+  --fs-base: 16px;
+  --fs-md: 18px;
+  --fs-lg: 22px;
+  --fs-xl: 28px;
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* 中性色阶 slate */
+  --c-bg: #f6f7f9;
+  --c-surface: #ffffff;
+  --c-surface-2: #f1f3f6;
+  --c-border: #dde2e8;
+  --c-border-strong: #c4ccd6;
+  --c-text: #1f2733;
+  --c-text-2: #4a5568;
+  --c-text-3: #7a8699;
+
+  /* 主色：大漆朱砂，稀有使用 */
+  --c-primary: #9e2b25;
+  --c-primary-hover: #85231e;
+  --c-primary-soft: #f3e3e2;
+  --c-accent: #b08a3e;
+
+  /* 语义色 */
+  --c-danger: #c0392b;
+  --c-danger-soft: #fbe3e0;
+  --c-warn: #c8862a;
+  --c-ok: #2f7d57;
+
+  /* 圆角与阴影 */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 2px rgba(20, 28, 40, 0.06);
+  --shadow: 0 4px 12px rgba(20, 28, 40, 0.1);
+  --shadow-lg: 0 12px 32px rgba(20, 28, 40, 0.16);
+
+  /* 过渡 */
+  --t-fast: 0.15s;
+  --t: 0.2s;
+
+  --sidebar-w: 208px;
+  --header-h: 56px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --c-bg: #14181f;
+    --c-surface: #1c222c;
+    --c-surface-2: #242c38;
+    --c-border: #313b49;
+    --c-border-strong: #445061;
+    --c-text: #e6eaf0;
+    --c-text-2: #b3bccb;
+    --c-text-3: #8492a5;
+    --c-primary: #d05a50;
+    --c-primary-hover: #dd7066;
+    --c-primary-soft: #3a2422;
+    --c-accent: #d3ab68;
+    --c-danger: #e0685a;
+    --c-danger-soft: #3a211e;
+    --c-warn: #dba454;
+    --c-ok: #57b085;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, sans-serif;
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+  color: var(--c-text);
+  background: var(--c-bg);
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-xl); font-weight: var(--fw-semibold); }
+h2 { font-size: var(--fs-lg); font-weight: var(--fw-semibold); }
+h3 { font-size: var(--fs-md); font-weight: var(--fw-medium); }
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-border-strong);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--c-bg);
+}
